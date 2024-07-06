@@ -20,8 +20,7 @@ const Form = ({ onClose }: any) => {
         msg: 'Some Error Occurred',
         type: 'default-alert',
     });
-
-    const [responseData, setResponseData] = useState(null);
+    
     const [successState, setSuccessState] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -88,7 +87,6 @@ const Form = ({ onClose }: any) => {
             }
 
             displayAlert("An email has been sent containing the referral code.", "success");
-            setResponseData(result);
             setSuccessState(true);
         } catch (e) {
             displayAlert("Some error occurred. Try again", "error");
@@ -115,8 +113,8 @@ const Form = ({ onClose }: any) => {
                     <div>
                         <div className='px-12 pb-8'>
                             <h1 className='text-success font-medium text-3xl mb-2'>Success!</h1>
-                            <p className='text-lg'>Congratulations {responseData?.referred_by_name}! You now stand a chance to win upto Rs. 15,000.</p>
-                            <p className='text-lg'>An email containing the referral code was sent to {responseData?.referred_to}.</p>
+                            <p className='text-lg'>Congratulations! You now stand a chance to win upto Rs. 15,000.</p>
+                            <p className='text-lg'>An email containing the referral code was sent to the referee.</p>
                         </div>
                     </div>
                     :
