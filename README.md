@@ -19,3 +19,7 @@ Now you can run the development server
 ```bash
 pnpm dev
 ```
+
+## Contact
+
+Report any errors or suggestions to hassansajid.dev@gmail.com
